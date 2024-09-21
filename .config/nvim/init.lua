@@ -7,4 +7,8 @@ _G.dd = function(...)
 end
 vim.print = _G.dd
 
+-- Set timeout for key sequences
+vim.opt.timeoutlen = 1000
+vim.opt.ttimeoutlen = 0
+
 require("config.lazy")
