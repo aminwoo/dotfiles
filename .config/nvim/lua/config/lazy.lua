@@ -71,7 +71,7 @@ require("competitest").setup({ -- to customize settings
 		interface = "split",
 	},
 	template_file = {
-		cpp = "~/coding/template.cpp",
+		cpp = "~/dotfiles/template.cpp",
 	},
 	-- put here configuration
 })
