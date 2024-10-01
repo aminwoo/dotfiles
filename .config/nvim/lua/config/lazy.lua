@@ -29,6 +29,7 @@ require("lazy").setup({
 		{ import = "lazyvim.plugins.extras.lang.typescript" },
 		{ import = "lazyvim.plugins.extras.lang.json" },
 		{ import = "lazyvim.plugins.extras.lang.tailwind" },
+		{ import = "lazyvim.plugins.extras.lang.clangd" },
 		{ import = "lazyvim.plugins.extras.ui.mini-animate" },
 		{ import = "lazyvim.plugins.extras.util.mini-hipatterns" },
 		{ import = "plugins" },
@@ -60,4 +61,17 @@ require("lazy").setup({
 		},
 	},
 	debug = false,
+})
+
+require("competitest").setup({ -- to customize settings
+	compile_command = {
+		cpp = { exec = "g++", args = { "-std=c++17", "-Wall", "$(FNAME)", "-o", "$(FNOEXT)" } },
+	},
+	runner_ui = {
+		interface = "split",
+	},
+	template_file = {
+		cpp = "~/coding/template.cpp",
+	},
+	-- put here configuration
 })

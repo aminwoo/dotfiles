@@ -3,6 +3,7 @@ return {
 		"nvim-treesitter/nvim-treesitter",
 		tag = "v0.9.1",
 		opts = {
+			ignore_install = { "printf", "xml" },
 			ensure_installed = {
 				"javascript",
 				"typescript",
