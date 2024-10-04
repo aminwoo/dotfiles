@@ -25,7 +25,7 @@ keymap.set("n", "<tab>", ":tabnext<Return>", opts)
 keymap.set("n", "<s-tab>", ":tabprev<Return>", opts)
 keymap.set("n", "tw", ":tabclose<Return>", opts)
 
--- Compile
+-- Compile and Run
 keymap.set("n", "<C-c>", ":CompetiTest run<CR>", ops)
 
 -- Diagnostics
@@ -46,7 +46,7 @@ vim.keymap.set("n", "<C-e>", function()
 	harpoon.ui:toggle_quick_menu(harpoon:list())
 end, opts)
 
-vim.keymap.set("n", "<C-h>", function()
+vim.keymap.set("n", "<C-g>", function()
 	harpoon:list():select(1)
 end, opts)
 vim.keymap.set("n", "<C-t>", function()
