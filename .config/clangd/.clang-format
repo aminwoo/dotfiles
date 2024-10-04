@@ -2,3 +2,4 @@ BasedOnStyle: LLVM
 IndentWidth: 4
 AllowShortFunctionsOnASingleLine: None
 AllowShortBlocksOnASingleLine: Never
+AllowShortLambdasOnASingleLine: None
