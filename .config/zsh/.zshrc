@@ -87,9 +87,13 @@ source $ZSH/oh-my-zsh.sh
 # else
 #   export EDITOR='nvim'
 # fi
+if command -v tmux &> /dev/null && [ -z "$TMUX" ]; then
+    tmux attach -t default || tmux new -s default
+fi
 
 # Compilation flags
 # export ARCHFLAGS="-arch $(uname -m)"
+
 
 # Set personal aliases, overriding those provided by Oh My Zsh libs,
 # plugins, and themes. Aliases can be placed here, though Oh My Zsh
@@ -103,4 +107,8 @@ source $ZSH/oh-my-zsh.sh
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 #
-alias nvim="$HOME/nvim-linux64/bin/nvim"
+alias nvim="/usr/local/nvim-linux64/bin/nvim"
+export PATH="$PATH:/usr/bin/flutter/bin"
+alias studio="/opt/android-studio/bin/studio.sh"
+
+
