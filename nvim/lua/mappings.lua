@@ -8,23 +8,8 @@ map("n", "m", function()
 	vim.diagnostic.goto_next()
 end)
 
-
 map("n", ";", ":", { desc = "CMD enter command mode" })
 map("i", "jk", "<ESC>")
-
-local harpoon = require("harpoon")
-
--- REQUIRED
-harpoon:setup()
--- REQUIRED
-
-map("n", "<leader>a", function() harpoon:list():add() end)
-map("n", "<C-e>", function() harpoon.ui:toggle_quick_menu(harpoon:list()) end)
-
-map("n", "<C-t>", function() harpoon:list():select(1) end)
-map("n", "<C-g>", function() harpoon:list():select(2) end)
-map("n", "<C-v>", function() harpoon:list():select(3) end)
-map("n", "<C-q>", function() harpoon:list():select(4) end)
 
 -- Mapping for opening Lazygit in a floating terminal
 map('n', '<leader>gg', ':lua Lazygit()<CR>')
@@ -49,5 +34,18 @@ function Lazygit()
    vim.cmd('startinsert') -- Enter insert mode in terminal
 end
 
+local harpoon = require("harpoon")
+
+-- REQUIRED
+harpoon:setup()
+-- REQUIRED
+
+map("n", "<leader>a", function() harpoon:list():add() end)
+map("n", "<C-e>", function() harpoon.ui:toggle_quick_menu(harpoon:list()) end)
+
+map("n", "<C-t>", function() harpoon:list():select(1) end)
+map("n", "<C-g>", function() harpoon:list():select(2) end)
+map("n", "<C-v>", function() harpoon:list():select(3) end)
+map("n", "<C-q>", function() harpoon:list():select(4) end)
 
 -- map({ "n", "i", "v" }, "<C-s>", "<cmd> w <cr>")

@@ -7,7 +7,7 @@ return {
     { "gs", mode = { "n", "x", "o" }, desc = "Leap from Windows" },
   },
   config = function(_, opts)
-    local leap = require("leap")
+    local leap = require "leap"
     for k, v in pairs(opts) do
       leap.opts[k] = v
     end

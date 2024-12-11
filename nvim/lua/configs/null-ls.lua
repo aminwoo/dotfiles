@@ -14,7 +14,7 @@ local opts = {
       })
       vim.api.nvim_create_autocmd("BufWritePre", {
         group = augroup,
-        buffer = bufnr, 
+        buffer = bufnr,
         callback = function()
           vim.lsp.buf.format({ bufnr = bufnr })
         end,
@@ -24,4 +24,3 @@ local opts = {
 }
 
 return opts
-
