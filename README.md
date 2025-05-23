@@ -12,7 +12,7 @@
 
 3. Clone your dotfiles repository as a bare repository into a `.cfg` directory within your home folder.
     ```
-    git clone --bare <your-git-repo-url> $HOME/.cfg
+    git clone --bare [<your-git-repo-url>](https://github.com/aminwoo/dotfiles.git) $HOME/.cfg
     ```
 
 4. Checkout the files from your bare repository into your `$HOME` directory.
